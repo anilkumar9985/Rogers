@@ -81,8 +81,15 @@ public class TestParllel {
 		String lerror =driver.switchTo().alert().getText();
 		Assert.assertEquals("Please enter valid email address.", lerror);
 		driver.switchTo().alert().accept();
-		
-		
+	
+	}
+	
+	@Test(priority = 4)
+	public void pageTitle()
+	{
+		String txt = driver.findElement(By.xpath("//h1[@id='title']")).getText();
+		System.out.println("Title of the page : "+ txt );
+		Assert.assertEquals("Passion Inc Sample Form", txt);
 	}
 	@AfterMethod
 	public void tearDown()
