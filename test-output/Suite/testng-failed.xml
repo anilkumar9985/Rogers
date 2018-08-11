@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="6" parallel="classes" name="Test(failed)" verbose="2">
+    <classes>
+      <class name="com.rogers.testparllel.TestParllel">
+        <methods>
+          <include name="firstName"/>
+          <include name="bInvoke"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.rogers.testparllel.TestParllel -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
